@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		668288BA87C119728226A29A /* Pods_DependencyInject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B154948415FB1657167C0EC5 /* Pods_DependencyInject.framework */; };
 		7051AF0025A5D3C400D56F0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7051AEFF25A5D3C400D56F0F /* AppDelegate.swift */; };
 		7051AF0225A5D3C400D56F0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7051AF0125A5D3C400D56F0F /* SceneDelegate.swift */; };
 		7051AF0725A5D3C400D56F0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7051AF0525A5D3C400D56F0F /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67682C6CD49064F38EA45446 /* Pods-DependencyInject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyInject.release.xcconfig"; path = "Target Support Files/Pods-DependencyInject/Pods-DependencyInject.release.xcconfig"; sourceTree = "<group>"; };
 		7051AEFC25A5D3C400D56F0F /* DependencyInject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DependencyInject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7051AEFF25A5D3C400D56F0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7051AF0125A5D3C400D56F0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		7051AF2525A5D59B00D56F0F /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		7051AF2A25A5D66900D56F0F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7051AF2E25A5D82400D56F0F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		93F1FF38350DA604B47AD8C5 /* Pods-DependencyInject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyInject.debug.xcconfig"; path = "Target Support Files/Pods-DependencyInject/Pods-DependencyInject.debug.xcconfig"; sourceTree = "<group>"; };
+		B154948415FB1657167C0EC5 /* Pods_DependencyInject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DependencyInject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668288BA87C119728226A29A /* Pods_DependencyInject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				7051AEFE25A5D3C400D56F0F /* DependencyInject */,
 				7051AEFD25A5D3C400D56F0F /* Products */,
+				F8C2A5158BD5DC0E286CDF0E /* Pods */,
+				BBD270F3F7D786DF5379FE04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +121,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BBD270F3F7D786DF5379FE04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B154948415FB1657167C0EC5 /* Pods_DependencyInject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8C2A5158BD5DC0E286CDF0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93F1FF38350DA604B47AD8C5 /* Pods-DependencyInject.debug.xcconfig */,
+				67682C6CD49064F38EA45446 /* Pods-DependencyInject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7051AF1025A5D3C700D56F0F /* Build configuration list for PBXNativeTarget "DependencyInject" */;
 			buildPhases = (
+				54A42019790F5FE5945AC425 /* [CP] Check Pods Manifest.lock */,
 				7051AEF825A5D3C400D56F0F /* Sources */,
 				7051AEF925A5D3C400D56F0F /* Frameworks */,
 				7051AEFA25A5D3C400D56F0F /* Resources */,
+				22A19AD3AE965FEB949F3D39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +206,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22A19AD3AE965FEB949F3D39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DependencyInject/Pods-DependencyInject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DependencyInject/Pods-DependencyInject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DependencyInject/Pods-DependencyInject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54A42019790F5FE5945AC425 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DependencyInject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7051AEF825A5D3C400D56F0F /* Sources */ = {
@@ -335,6 +404,7 @@
 		};
 		7051AF1125A5D3C700D56F0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F1FF38350DA604B47AD8C5 /* Pods-DependencyInject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -354,6 +424,7 @@
 		};
 		7051AF1225A5D3C700D56F0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67682C6CD49064F38EA45446 /* Pods-DependencyInject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

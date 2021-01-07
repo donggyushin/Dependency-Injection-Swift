@@ -7,9 +7,14 @@
 
 import Foundation
 
-class RestaurantLister {
+
+protocol RestaurantLister {
+    func get(onCompletion: @escaping ([Restaurant]) -> ())
+}
+
+class ServerRestaurantLister:RestaurantLister {
     
-    static let shared = RestaurantLister()
+    static let shared = ServerRestaurantLister()
     
     func get(onCompletion: @escaping ([Restaurant]) -> ()) {
         

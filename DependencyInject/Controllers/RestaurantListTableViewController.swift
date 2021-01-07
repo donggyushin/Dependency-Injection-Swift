@@ -19,20 +19,35 @@ class RestaurantListTableViewController: UITableViewController {
         }
     }
     
+    let restaurantLister:RestaurantLister
+    
     private lazy var loading:LoadingView = {
         let lv = LoadingView()
         return lv
     }()
     
     // MARK: Lifecycles
+    init(restaurantLister:RestaurantLister) {
+        
+        self.restaurantLister = restaurantLister
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        RestaurantLister.shared.get { self.restaurants = $0 }
-
         configureUI()
+        fetchRestaurants()
         tableView.register(TableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+    }
+    
+    // MARK: Fetch APIs
+    func fetchRestaurants() {
+        self.restaurantLister.get { self.restaurants = $0 }
     }
     
     // MARK: Configures

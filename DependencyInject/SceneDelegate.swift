@@ -7,16 +7,18 @@
 
 import UIKit
 
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: scene)
-        self.window?.rootViewController = RestaurantListTableViewController()
+        
+        self.window?.rootViewController = RestaurantListTableViewController(restaurantLister:appDelegate.container.resolve(RestaurantLister.self)!)
         self.window?.makeKeyAndVisible()
     }
 
